@@ -1,4 +1,4 @@
-package core;
+package base;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -42,8 +42,8 @@ public class BasePage {
         return combo.getFirstSelectedOption().getText();
     }
 
-    public void clicarLink(By locator){
-        getDriver().findElement(locator).click();
+    public void clicarLink(String locator){
+        getDriver().findElement(By.linkText(locator)).click();
     }
 
     public String obterValorPorTexto(By locator){
