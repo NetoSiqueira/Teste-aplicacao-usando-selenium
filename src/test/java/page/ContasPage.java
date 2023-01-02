@@ -4,7 +4,7 @@ import base.BasePage;
 import org.openqa.selenium.By;
 
 public class ContasPage extends BasePage {
-    public void adicionarContas(String nome){
+    public void setNome(String nome){
         escreve(By.id("nome"), nome);
     }
     public void salvar(){
@@ -13,5 +13,11 @@ public class ContasPage extends BasePage {
 
     public String obterMensagemSucesso(){
         return obterValorPorTexto(By.xpath("//div[@class='alert alert-success']"));
+    }
+
+    public String obterMensagemErro(){return obterValorPorTexto(By.xpath("//div[@class='alert alert-danger']"));}
+    public void clicarAlterarConta(String valor){
+        obterCelula("Conta", valor, "Ações","tabelaContas")
+                .findElement(By.xpath(".//span[@class='glyphicon glyphicon-edit']")).click();
     }
 }

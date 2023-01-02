@@ -13,8 +13,29 @@ public class ContaTest extends BaseTest {
     public void testInserirConta(){
         menuPage.acessarTelaInserirConta();
 
-        contasPage.adicionarContas("Conta teste");
+        contasPage.setNome("Conta teste");
         contasPage.salvar();
         Assert.assertEquals("Conta adicionada com sucesso!", contasPage.obterMensagemSucesso());
+    }
+
+    @Test
+    public void testAlterarConta(){
+        menuPage.acessarListasConta();
+
+        contasPage.clicarAlterarConta("Conta teste");
+
+        contasPage.setNome("Conta do Teste Alterada");
+        contasPage.salvar();
+
+        Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
+    }
+
+    @Test
+    public void testInserirContaMesmoNome(){
+        menuPage.acessarTelaInserirConta();
+
+        contasPage.setNome("Conta do Teste Alterada");
+        contasPage.salvar();
+        Assert.assertEquals("Já existe uma conta com esse nome!", contasPage.obterMensagemErro());
     }
 }
