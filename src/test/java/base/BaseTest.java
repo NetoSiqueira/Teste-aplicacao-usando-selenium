@@ -17,17 +17,8 @@ import static core.DriverFactory.getDriver;
 import static core.DriverFactory.killDriver;
 
 public class BaseTest {
-    protected LoginPage verificacao = new LoginPage();
     @Rule
     public TestName testName = new TestName();
-    @Before
-    public void inicializa(){
-        verificacao.acessarTelaInicial();
-        verificacao.setEmail("neto@neto.com");
-        verificacao.setSenha("1234");
-        verificacao.entrar();
-
-    }
 
     @After
     public void fechar() throws IOException {

@@ -114,6 +114,7 @@ public class BasePage {
     }
 
     public void clicarBotaoPorTexto(String texto){
+
         clicar(By.xpath("//button[.='"+texto+"']"));
     }
 }

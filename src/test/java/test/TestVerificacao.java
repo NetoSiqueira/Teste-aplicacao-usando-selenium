@@ -7,6 +7,7 @@ import org.junit.Test;
 
 public class TestVerificacao extends BaseTest {
 
+private LoginPage verificacao = new LoginPage();
 
     @Test
     public void Verificar(){

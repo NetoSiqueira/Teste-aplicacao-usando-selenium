@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import static core.Propriedades.NOME_CONTA_ALTERADA;
 import static utils.DataUtils.obterDataFormatada;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTest extends BaseTest {
@@ -28,7 +29,7 @@ public class MovimentacaoTest extends BaseTest {
         page.setDescricao("Pagamento");
         page.setInteressado("Neto");
         page.setValor("1627");
-        page.setConta("Conta do Teste Alterada");
+        page.setConta(NOME_CONTA_ALTERADA);
         page.setSituacaoPago();
         page.salvar();
 
@@ -65,7 +66,7 @@ public class MovimentacaoTest extends BaseTest {
         page.setDescricao("Pagamento");
         page.setInteressado("Neto");
         page.setValor("1627");
-        page.setConta("Conta do Teste Alterada");
+        page.setConta(NOME_CONTA_ALTERADA);
         page.setSituacaoPago();
         page.salvar();
 
