@@ -112,4 +112,8 @@ public class BasePage {
         getDriver().findElement(By.xpath("//*[@id = '"+radical+":option_panel']//li[.='"+valor+"']")).click();
 
     }
+
+    public void clicarBotaoPorTexto(String texto){
+        clicar(By.xpath("//button[.='"+texto+"']"));
+    }
 }

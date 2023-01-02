@@ -8,7 +8,7 @@ public class ContasPage extends BasePage {
         escreve(By.id("nome"), nome);
     }
     public void salvar(){
-        clicar(By.xpath("//button[.='Salvar']"));
+        clicarBotaoPorTexto("Salvar");
     }
 
     public String obterMensagemSucesso(){
