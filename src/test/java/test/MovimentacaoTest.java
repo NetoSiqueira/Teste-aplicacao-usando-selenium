@@ -21,8 +21,8 @@ public class MovimentacaoTest extends BaseTest {
     public void testInserirMovimentacao(){
         menuPage.acessarTelaInserirMovimentacao();
 
-        page.setDataMovimentacao("01/01/2023");
-        page.setDataPagamento("02/01/2023");
+        page.setDataMovimentacao(obterDataFormatada(new Date()));
+        page.setDataPagamento(obterDataFormatada(new Date()));
         page.setDescricao("Pagamento");
         page.setInteressado("Neto");
         page.setValor("1627");
@@ -72,6 +72,6 @@ public class MovimentacaoTest extends BaseTest {
         Assert.assertEquals(1, erros.size());
 
     }
-    
+
 
 }
